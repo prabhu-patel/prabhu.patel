@@ -43,10 +43,11 @@
     event.preventDefault();
   });
   $(document).ready(function () {
-    //https://www.screener.in/api/company/MARUTI/
+    //https://www.screener.in/api/company/MARUTI/?callback=?
     $.getJSON("json/maruthi.json").done(function (data) {
       console.log(data.short_name);
-      //$('.pagecontent').html(data.short_name);
+      $('.compName').html(data.name);
+      renderSalesDetails(data);
     });
   });
 })(jQuery); // End of use strict
