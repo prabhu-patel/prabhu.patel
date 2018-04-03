@@ -48,6 +48,12 @@
       console.log(data.short_name);
       $('.compName').html(data.name);
       renderSalesDetails(data);
+      renderAdditionalSummaryData(data);
+      renderReturnOnEquity(data);
+      renderProfitGrowth(data);
+      renderAnnualisedNetProfit(data);
+      renderAnnualisedEPS(data);
+      renderAnnualisedDividend(data);
     });
   });
 })(jQuery); // End of use strict
