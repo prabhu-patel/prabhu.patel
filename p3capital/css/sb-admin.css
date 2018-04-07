@@ -476,3 +476,13 @@ footer.sticky-footer {
     width: calc(100% - 55px);
   }
 }
+
+dt {
+  float: left;
+  width: 50%;
+}
+
+dd {
+  float: left;
+  width: 50%;
+}

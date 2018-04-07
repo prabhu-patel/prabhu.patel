@@ -51,9 +51,10 @@
       renderAdditionalSummaryData(data);
       renderReturnOnEquity(data);
       renderProfitGrowth(data);
-      renderAnnualisedNetProfit(data);
-      renderAnnualisedEPS(data);
-      renderAnnualisedDividend(data);
+      var annualData = jsonPath(data,"$..annual");
+      renderAnnualisedNetProfit(annualData[0]);
+      renderAnnualisedEPS(annualData[0]);
+      renderAnnualisedDividend(annualData[0]);
     });
   });
 })(jQuery); // End of use strict
