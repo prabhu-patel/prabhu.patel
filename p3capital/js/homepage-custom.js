@@ -26,30 +26,25 @@ function renderAdditionalSummaryData(data) {
 function renderAnnualisedNetProfit(annualData) {
     var domObj = "";
     var netProfit = fetchAnnualData(annualData, "Net Profit");
-    console.log("jsonpath: " + netProfit);
     $('#annual_netprofit').append(netProfit);
 }
 
 function renderAnnualisedDividend(annualData) {
     var domObj = "";
     var netProfit = fetchAnnualData(annualData, "Dividend Payout");
-    console.log("jsonpath: " + netProfit);
     $('#annual_dividend').append(netProfit);
 }
 
 function renderAnnualisedEPS(annualData) {
     var domObj = "";
     var netProfit = fetchAnnualData(annualData, "EPS (unadj)");
-    console.log("jsonpath: " + netProfit);
     $('#annual_eps').append(netProfit);
 }
 
 function fetchAnnualData(annualData, searchStr) {
     var result;
     $.each(annualData, function (index, value) {
-        console.log("looping : " + value);
         if (value[0] == searchStr) {
-            console.log("got value : " + value);
             result = createDescripList(value[1]);
             return false;
         }
