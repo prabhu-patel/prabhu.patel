@@ -43,26 +43,13 @@
     event.preventDefault();
   });
   $(document).ready(function () {
-    //https://www.screener.in/api/company/MARUTI/?callback=?
-    /*$.getJSON("json/maruthi.json").done(function (data) {
-      console.log(data.short_name);
-      $('.compName').html(data.name);
-      renderSalesDetails(data);
-      renderAdditionalSummaryData(data);
-      renderReturnOnEquity(data);
-      renderProfitGrowth(data);
-      var annualData = jsonPath(data,"$..annual");
-      renderAnnualisedNetProfit(annualData[0]);
-      renderAnnualisedEPS(annualData[0]);
-      renderAnnualisedDividend(annualData[0]);
-    });*/
-
     $.getJSON("json/roster.json").done(function (data) {
       var itemTpl = $('#hiddenTemplate').text();
       $.each(data.symbols, function (index, symbolStr) {
         var listItem = itemTpl.replace(/compSymbol/g,symbolStr);
         $('#companyAccordion').append(listItem);
       });
+      loadCompanyData("ABB");
     });
   });
 })(jQuery); // End of use strict
