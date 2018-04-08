@@ -60,3 +60,19 @@ function createDescripList(valueObj) {
     });
     return rowEle;
 }
+
+function loadCompanyData(selectdEle){
+    var compName = selectdEle;
+    $.getJSON("json/"+compName+".json").done(function (data) {
+        console.log(data.short_name);
+        $('.compName').html(data.name);
+        renderSalesDetails(data);
+        renderAdditionalSummaryData(data);
+        renderReturnOnEquity(data);
+        renderProfitGrowth(data);
+        var annualData = jsonPath(data,"$..annual");
+        renderAnnualisedNetProfit(annualData[0]);
+        renderAnnualisedEPS(annualData[0]);
+        renderAnnualisedDividend(annualData[0]);
+      });
+}

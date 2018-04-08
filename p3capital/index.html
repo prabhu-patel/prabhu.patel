@@ -14,6 +14,14 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+
+  <script id="hiddenTemplate" type="text/template-only">
+    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="compSymbol">
+      <a class="nav-link" href="javascript:loadCompanyData('compSymbol')">
+        <span class="nav-link-text">compSymbol</span>
+      </a>
+    </li>
+  </script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -25,19 +33,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Maruti">
-          <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span class="nav-link-text">MARUTI</span>
-          </a>
-        </li>
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="ABB India">
-          <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-area-chart"></i>
-            <span class="nav-link-text">ABB India</span>
-          </a>
-        </li>
+      <ul class="navbar-nav navbar-sidenav" id="companyAccordion">
       </ul>
       <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">
